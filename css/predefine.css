@@ -1,0 +1,370 @@
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+
+
+
+
+
+
+
+
+* {
+	transition: 200ms ease all;
+}
+
+:root {
+    --primaryColor: #2B50AA;
+    --secondaryColor: #484d61;
+    --extraColor1: #F0F0F0;
+    --extraColor2: #505050;
+    --extraColor3: #fff;
+    --boxShadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.14);
+    --backgroundBlur: blur(25px);
+    --backgroundBrightness: rgba(255, 255 255, 0.1);
+    --backgroundBrightnessForPlayer: rgba(0, 0, 0, 0.7);
+    --minFormInputHeight: 40px;
+    --playlistAndCoverDimension: 200px;
+}
+
+html, body {
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+    max-width: 1920px;
+    min-width: 400px;
+    margin: 0 auto;
+}
+
+body {
+    background-color: white;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 900;
+}
+
+h2 {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+a {
+    display: initial;
+    color: black;
+    text-decoration: unset;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.seperator {
+    background-color: #fff;
+    border-radius: 10px;
+    width: 2px;
+    height: 20px;
+}
+
+.seperatorH {
+    height: 3px;
+    background-color: var(--extraColor2);
+    border-radius: 10px;
+    margin: 0 20px;
+    box-sizing: border-box;
+}
+
+.backgroundBlur {
+    backdrop-filter: var(--backgroundBlur);
+    background-color: var(--backgroundBrightness);
+    -webkit-backdrop-filter: var(--backgroundBlur);
+    -moz-filter: var(--backgroundBlur);
+    -o-filter: var(--backgroundBlur);
+    -ms-filter: var(--backgroundBlur);
+}
+
+
+
+
+
+
+
+/* SONG LIST */
+.indivualSongList {
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    column-gap: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.indivualSongList:nth-child(even) {
+    background-color: var(--extraColor1);
+}
+
+.indivualSongList .left {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    width: 100%;
+}
+
+.indivualSongList .left .trackNo {
+    color: gray;
+    min-width: 20px;
+}
+
+.indivualSongList .right {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.titleAndDuration {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    column-gap: 30px;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+/* FORM ELEMENTS */
+button, input[type='submit'] {
+    display: block;
+    outline: none;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    width: auto;
+    box-sizing: border-box;
+    color: black;
+    cursor: pointer;
+    color: white;
+}
+
+input[type='radio'] {
+    box-shadow: unset;;
+    padding: 0;
+    width: unset;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+button:hover, input[type='button']:hover, input[type='submit']:hover, select:hover {
+    box-shadow: var(--boxShadow);
+}
+
+input[type='date'], input[type="search"], input[type="url"], input[type="text"], input[type="password"], input[type="email"], input[type="tel"], input[type="number"], input[type="date"], textarea, select {
+    display: block;
+    border: none;
+    padding: 0 8px;
+    border-bottom: darkgray solid 3px;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 14px;
+    box-sizing: border-box;
+    outline: none;
+    box-shadow: var(--boxShadow);
+    transition: 200ms ease all;
+    min-height: var(--minFormInputHeight);
+}
+
+input[type='date']:hover, input[type="search"]:hover, input[type="url"]:hover, input[type="text"]:hover, input[type="password"]:hover, input[type="email"]:hover, input[type="tel"]:hover, input[type="number"]:hover, input[type="date"]:hover, textarea:hover, select:hover {
+    border-bottom-color: var(--extraColor2);
+}
+
+input[type='date']:focus, input[type="search"]:focus, input[type="url"]:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="tel"]:focus, input[type="number"]:focus, input[type="date"]:focus, textarea:focus, select:focus {
+    border-color: var(--primaryColor);
+    border-radius: 5px;
+}
+
+button[accent='hoverBackgroundShow'] {
+    box-shadow: none;
+    background-color: none;
+    background: unset;
+    padding: 0;
+    min-height: 40px;
+}
+
+button[accent='hoverBackgroundShow']:hover {
+    box-shadow: var(--boxShadow);
+    padding: 0;
+    background-color: gray;
+    padding: 0 8px;
+}
+
+button[accent='btnTextOnly'] {
+    font-weight: 700;
+    font-size: 15px;
+    color: #000;
+}
+
+button[accent='navigationLink'] {
+    padding: 0;
+    background: unset;
+    background-color: unset;
+    color: white;
+    font-size: 16px;
+}
+
+button[accent='navIconAndText'] {
+    box-shadow: none;
+    background-color: unset;
+    background: unset;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    color: white;
+    font-size: medium;
+    font-weight: 700;
+    padding: 10px;
+}
+
+button[accent='navIconAndText'] svg {
+    margin: 0;
+}
+
+button[accent='navIconAndText']:hover {
+    box-shadow: var(--boxShadow);
+    background-color: var(--extraColor2);
+}
+
+button[accent='albumPlayBtn'] {
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    padding: 5px 10px;
+}
+
+input[type='submit'] {
+    background-color: var(--primaryColor);
+    font-weight: 700;
+    -webkit-appearance: none;
+}
+
+input[type='date'] {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input[type='date']::-webkit-date-and-time-value {
+    text-align: left;
+}
+
+select {
+    cursor: pointer;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: url("data:image/svg+xml,<svg width='12' height='12' xmlns='http://www.w3.org/2000/svg'><path d='M2.15 4.65c.2-.2.5-.2.7 0L6 7.79l3.15-3.14a.5.5 0 11.7.7l-3.5 3.5a.5.5 0 01-.7 0l-3.5-3.5a.5.5 0 010-.7z'></path></svg>") no-repeat;
+    background-position: calc(100% - 10px) center !important;
+    color: black;
+}
+
+svg, span, label {
+	display: block;
+}
+
+button svg {
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    pointer-events: none;
+    user-drag: none; 
+    user-select: none;
+    object-fit: cover;
+    background-color: white;
+}
+
+.errorMsg {
+    color: red;
+    font-weight: 700;
+    font-size: small;
+    display: none;
+}
+
+.errorSection, .successSection {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    z-index: 1;
+    background-color: red;
+    color: white;
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    font-weight: 700;
+    font-size: medium;
+}
+
+.successSection {
+    background-color: green;
+}
+
+.successSection a {
+    color: white;
+    text-decoration: underline;
+}
+
+footer {
+	background-color: #000;
+	color: #fff;
+	padding: 15px 20px;
+}
+
+.explicitIcon {
+    height: 12px;
+    display: unset;
+    margin-left: 5px;
+}
+
+.explicitIcon path {
+    fill: #d60017;
+}

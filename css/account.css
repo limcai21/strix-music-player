@@ -1,0 +1,56 @@
+.profileSection {
+    padding: 60px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    display: grid;
+    row-gap: 30px;
+    background-color: #fff;
+}
+
+.profileSection .header .subHeader {
+    display: grid;
+    align-items: center;
+    row-gap: 2px;
+}
+
+#updateProfileForm {
+    display: grid;
+    row-gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--extraColor1);
+}
+
+#updateProfileForm button {
+    background-color: black;
+    padding: 5px;
+}
+
+#updateProfileForm button svg {
+    width: 20px;
+    height: auto;
+}
+
+#updateProfileForm svg path {
+    fill: white;
+}
+
+#updateProfileForm .userInfo {
+    font-weight: 700;
+    font-size: large;
+}
+
+#updateProfileForm .otherDataSection {
+    margin-top: 20px;
+}
+
+#updateProfileForm .editInput {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+#userEmail {
+    max-width: 250px;
+    height: 100%;
+}

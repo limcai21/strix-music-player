@@ -1,0 +1,247 @@
+svg {
+    display: inherit;
+    width: 20px;
+    height: 20px;
+}
+
+.mediaPlayerMainDiv {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #36393B;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    min-width: 300px;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.mediaPlayerMainDiv button {
+    min-height: unset;
+}
+
+.mediaPlayer {
+    display: grid;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-between;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    grid-template-areas: "left middle right";
+    background-color: var(--backgroundBrightnessForPlayer);
+}
+
+.mediaPlayer .left {
+    grid-area: left;
+}
+
+.mediaPlayer .middle {
+    display: grid;
+    align-items: center;
+    justify-content: stretch;
+    row-gap: 5px;
+    grid-area: middle;
+}
+
+.mediaPlayer .right {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    column-gap: 30px;
+    grid-area: right;
+}
+
+.mediaPlayer .right .otherIcons {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+}
+
+button {
+    border: none;
+    background: unset;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+button:disabled svg path {
+    fill: gray
+}
+
+button:hover:disabled, button:disabled {
+    background-color: unset;
+    cursor: unset;
+    box-shadow: unset;
+}
+
+input[type='range'] {
+    -webkit-appearance: none;
+    width: 100%;
+    margin: 0;
+    height: 3px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 5px solid var(--primaryColor);
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+    cursor: pointer;
+    border: 4px solid var(--primaryColor);
+}
+
+input[type=range]::-webkit-slider-thumb:active {
+    cursor: pointer;
+    border: 6px solid var(--primaryColor);
+}
+
+#progressBar {
+    display: block;
+    background-color: var(--primaryColor);
+    border-radius: 0;
+    height: 5px;
+    position: relative;
+    z-index: 1;
+}
+
+#progressBar:disabled::-webkit-slider-thumb {
+    background: unset;
+    cursor: unset;
+    visibility: hidden;
+}
+
+#volumeControl {
+    max-width: 80px;
+}
+
+
+.volumeSection,
+.mediaSection {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+}
+
+.mediaSection {
+    justify-content: center;
+    justify-self: center;
+}
+
+.progressSection {
+    display: flex;
+    column-gap: 10px;
+    color: white;
+    font-size: small;
+    align-items: center;
+    justify-content: center;
+}
+
+button:hover,
+.hoverBtn {
+    background-color: #797B7C;
+    border-radius: 5px;
+}
+
+button.activeBtn {
+    background-color: #6D6F70;
+}
+
+.songInfo {
+    display: flex;
+    column-gap: 30px;
+    align-items: center;
+}
+
+.songInfo .songData {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    border-radius: 5px;
+}
+
+.songInfo .songData .songNameAndArtist {
+    color: white;
+    display: grid;
+}
+
+.songInfo .songData .songNameAndArtist .title {
+    font-size: medium;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    font-weight: 700;
+    display: block;
+    min-height: 20px;
+    max-height: 20px;
+    align-items: center;
+    column-gap: 5px;
+}
+
+
+.songInfo .songData .songNameAndArtist .artist {
+    font-size: small;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    display: block;
+    min-height: 16px;
+    max-height: 16px;
+}
+
+#playerAlbumArt {
+    max-width: 50px; 
+    min-width: 50px;
+    object-fit: cover; 
+    background-color: #fff; 
+    border-radius: 5px;
+    width: 0px;
+}
+
+
+
+
+/* TABLET  */
+@media only screen and (max-width: 992px) {
+    .mediaPlayer {
+        grid-template-columns: 1fr auto;
+        grid-template-areas: 
+        "left right"
+        "left middle";
+        row-gap: 5px;
+    }
+
+    .mediaPlayer .middle .progressSection, .mediaPlayer .right .volumeSection {
+        display: none!important;
+    }
+
+    .mediaPlayer .middle .mediaSection {
+        justify-content: end;
+    }
+}
+
+
+
+/* MOBILE  */
+@media only screen and (max-width: 768px) {
+    .mediaPlayer {
+        padding: 10px 20px;
+    }
+    
+    #playerAlbumArt {
+        display: none;
+    }
+}

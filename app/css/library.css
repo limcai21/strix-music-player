@@ -1,0 +1,106 @@
+.allPlaylistSection {
+    display: grid;
+    align-items: center;
+    row-gap: 30px;
+}
+
+#libraryFavouriteSection {
+    border-radius: 10px;
+    display: grid;
+    align-items: center;
+    background-image: url("https://raw.githubusercontent.com/limcai21/project-music/main/img/favouriteCover.png"), url("../../img/favouriteCover.png");
+    background-repeat: no-repeat;
+    background-size: 500%;
+    background-position: top right;
+    cursor: pointer;
+}
+
+#libraryFavouriteSection .content {
+    border-radius: 10px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: auto 100px;
+    align-items: center;
+    column-gap: 20px;
+    color: white;
+    box-sizing: border-box;
+}
+
+.otherPlaylistSection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+    gap: 10px;
+}
+
+.otherPlaylistSection .individualPlaylistSearch {
+    margin: 0;
+}
+
+.otherPlaylistSection .individualPlaylistSearch img {
+    height: 65px;
+    width: 65px;
+}
+
+.otherPlaylistSection::-webkit-scrollbar {
+    height: 20px;
+}
+
+
+.otherPlaylistSection::-webkit-scrollbar-track {
+    background-color: unset;
+}
+
+.otherPlaylistSection::-webkit-scrollbar-thumb {
+    border: 5px solid rgba(0, 0, 0, 0);
+    border-left: 30px solid rgba(0, 0, 0, 0);
+    border-right: 30px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 9999px;
+}
+
+.otherPlaylistSection .individualPlaylistSearch {
+    box-sizing: border-box;
+}
+
+#libraryWelcomeUser {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#libraryWelcomeUser h1 {
+    margin-bottom: 0;
+}
+
+#libraryCreatePlaylist {
+    padding: 5px;
+    background-color: black;   
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+    #libraryFavouriteSection .content {
+        display: flex;
+        flex-direction: column-reverse;
+        row-gap: 10px;
+        align-items: flex-start;
+    }
+
+    #libraryFavouriteSection .content .right {
+        max-width: 75px;
+    }
+
+    .otherPlaylistSection {
+        scroll-padding: 20px;
+        -ms-overflow-style: none;   /* Internet Explorer 10+ */
+        scrollbar-width: none;      /* Firefox */
+        grid-template-columns: 1fr;
+    }
+
+    .otherPlaylistSection::-webkit-scrollbar { 
+        display: none;              /* Safari and Chrome */
+    }
+}

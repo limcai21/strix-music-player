@@ -1,0 +1,6 @@
+#playlistToSearch {
+    background-color: var(--primaryColor);
+    font-weight: 700;
+    padding: 10px 12px;
+    width: fit-content;
+}

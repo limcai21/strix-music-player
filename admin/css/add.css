@@ -1,0 +1,50 @@
+#addAlbumMainDiv {
+    padding: 0;
+    display: grid;
+    grid-template-columns: auto 400px;
+    grid-template-areas: "left right";
+}
+
+#addAlbumMainDiv .left {
+    padding: 60px 20px;
+    grid-area: left;
+}
+
+#addAlbumMainDiv .right {
+    grid-area: right;
+}
+
+#addAlbumMainDiv .right .albumCoverDisplay {
+    background-color: lightgray;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    font-weight: 600;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+}
+
+#addSongForm .albumTitle {
+    font-weight: 700;
+}
+
+/* TABLET  */
+@media only screen and (max-width: 1200px) {
+    
+    
+}
+
+
+
+/* MOBILE  */
+@media only screen and (max-width: 768px) {
+    #addAlbumMainDiv {
+        grid-template-columns: auto;
+        grid-template-areas: "right" "left";
+    }
+
+    #addAlbumMainDiv .right .albumCoverDisplay {
+        min-height: 250px;
+    }
+}

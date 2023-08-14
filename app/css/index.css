@@ -1,0 +1,250 @@
+.errorIndex {
+    padding: 0 30px;
+    min-height: 20px;
+    width: 100%;
+}
+
+.playlistAndAlbumSection {
+    display: grid;
+    align-items: center;
+    row-gap: 60px;
+    left: -30px;
+    position: relative;
+    width: calc(100% + 60px);
+}
+
+.displaySection {
+    display: grid;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.displaySection .header {
+    display: flex;
+    margin: 0 30px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.displaySection .header h3 {
+    font-weight: 700;
+}
+
+.welcomeUser h1 {
+    margin-bottom: 10px;
+}
+
+.viewAllBtn {
+    cursor: pointer;
+    color: var(--extraColor2);
+}
+
+.songListDiv {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    display: flex;
+    column-gap: 10px;
+    scroll-padding: 30px;
+    scroll-snap-align: start;
+}
+
+.songListDiv::-webkit-scrollbar {
+    height: 20px;
+}
+
+.songListDiv::-webkit-scrollbar-track {
+    background-color: unset;
+}
+
+.songListDiv::-webkit-scrollbar-thumb {
+    border: 5px solid rgba(0, 0, 0, 0);
+    border-left: 30px solid rgba(0, 0, 0, 0);
+    border-right: 30px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 9999px;
+    height: 5px;
+}
+
+.songCard, .playlistCard {
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    padding: 10px 10px 15px;
+    cursor: pointer;
+    scroll-snap-align: start;
+    display: grid;
+    align-items: center;
+    min-width: 200px;
+    max-width: 200px;
+    box-shadow: var(--boxShadow);
+}
+
+.songCard:first-of-type, .playlistCard:first-of-type {
+    margin-left: 30px;
+}
+
+.songCard:last-of-type {
+    margin-right: 30px;
+}
+
+#viewMorePlaylist {
+    margin-right: 30px;
+    padding: 10px;
+    justify-content: center;
+    min-width: 125px;
+    max-width: 150px;
+    border: solid var(--primaryColor) 5px;
+    display: grid;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: var(--boxShadow);
+    font-weight: 700;
+    background: var(--primaryColor);
+    color: white;
+}
+
+#viewMorePlaylist * {
+    cursor: pointer;
+}
+
+.playlistCard {
+    padding: 10px;
+    max-width: 275px;
+    min-width: 275px;
+}
+
+.songCard .content, .playlistCard .content {
+    display: flex;
+    row-gap: 10px;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+}
+
+.playlistCard .content {
+    flex-direction: unset;
+    column-gap: 20px;
+    justify-content: space-between;
+}
+
+.playlistCard .content .coverArt img{
+    display: grid;
+    border-radius: 5px;
+    width: 65px;
+    height: 65px;
+    align-items: center;
+    aspect-ratio: 1/1;
+}
+
+.songCard .content .coverArt img {
+    display: grid;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    background-color: white;
+    min-height: 200px;
+    aspect-ratio: 1/1;
+}
+
+.playlistCard .content .coverArt img {
+    height: 65px;
+}
+
+.songCard .content .information, .playlistCard .content .information {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 2px;
+    column-gap: 10px;
+}
+
+.playlistCard .content .information {
+    width: 100%;
+}
+
+.songCard .content .information .songTitleAndArtist, .playlistCard .content .information .songTitleAndArtist {
+    display: grid;
+    column-gap: 10px;
+}
+
+.songCard .content .information .albumTitle, .playlistCard .content .information .playlistTitle {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    font-weight: 700;
+    display: block;
+    font-size: medium;
+    max-height: 20px;
+    min-height: 20px;
+    cursor: pointer;
+}
+
+.songCard .content .information .albumArtist, .playlistCard .content .information .albumArtist {
+    font-size: small;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    color: var(--extraColor1);
+    min-height: 16px;
+    max-height: 16px;
+}
+
+
+
+
+/* TABLET  */
+@media only screen and (max-width: 992px) {
+    
+}
+
+
+/* MOBILE  */
+@media only screen and (max-width: 768px) {
+    .errorIndex {
+        padding: 0 20px;
+    }
+
+    .pageContent {
+        display: block;
+    }
+
+    .displaySection .header {
+        margin: 0 20px;
+    }
+
+    .playlistAndAlbumSection {
+        left: -20px;
+        width: calc(100% + 40px);
+    }
+
+    .songCard:first-of-type, .playlistCard:first-of-type {
+        margin-left: 20px;
+    }
+
+    .songCard:last-of-type, .playlistCard:last-of-type {
+        margin-right: 20px;
+    }
+
+    .songListDiv {
+        scroll-padding: 20px;
+        -ms-overflow-style: none;   
+        scrollbar-width: none;      
+    }
+
+    .songListDiv::-webkit-scrollbar { 
+        display: none;             
+    }
+
+    .songCard .content .coverArt img {
+        min-height: 150px;
+    }
+    
+}

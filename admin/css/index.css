@@ -1,0 +1,214 @@
+.outputAlbum {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 10px;
+}
+
+.albumData {
+    display: flex;
+    column-gap: 20px;
+    background-color: var(--extraColor1);
+    padding: 10px;
+    border-radius: 10px;
+    align-items: center;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.albumData:hover {
+    box-shadow: var(--boxShadow);
+}
+
+.albumData .right {
+    display: grid;
+    row-gap: 15px;
+}
+
+.albumData .right .albumTitleAndArtist {
+    display: grid;
+    row-gap: 3px;
+}
+
+.albumData .right .otherData {
+    display: flex;
+    column-gap: 5px;
+}
+
+.albumData .left img {
+    width: 100px;
+}
+
+.albumTitle {
+    font-weight: 700;
+    font-size: 18px;
+    cursor: pointer;
+    max-width: initial;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    height: calc(100% + 2px);
+}
+
+.albumArtist {
+    font-size: 14px;
+}
+
+
+.albumHeader {
+    position: relative;
+    left: -20px;
+    width: calc(100% + 40px);
+    top: -60px;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+
+.albumHeader .content {
+    padding: 60px 20px 20px;
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    row-gap: 20px;
+    background: rgba(0,0,0,.5);
+}
+
+.albumHeader .content .right {
+    display: grid;
+    row-gap: 20px;
+}
+
+.albumHeader .content .right .albumTitleAndArtist {
+    display: grid;
+    row-gap: 5px;
+}
+
+.albumHeader .content .right .otherData {
+    display: flex;
+    column-gap: 5px;
+}
+
+.albumHeader .content .right .otherData span {
+    color: white;
+}
+
+.albumHeader .content .left img {
+    width: 200px;
+}
+
+.albumHeader .toolbar {
+    padding: 10px 20px 20px;
+    background: rgba(0,0,0,.5);
+    display: flex;
+    column-gap: 10px
+}
+
+.albumHeader .toolbar .editBtn:hover {
+    background-color: green;
+} 
+
+.albumHeader .toolbar .deleteBtn:hover {
+    background-color: red;
+}
+
+.songSection {
+    margin-top: -20px;
+}
+
+
+
+
+
+/* EDIT AND DELETE BTN */
+.indivualSongList .editBtn, .indivualSongList .deleteBtn {
+    background-color: unset;
+    padding: 5px;
+}
+
+.indivualSongList .editBtn svg path {
+    fill: green;
+}
+
+.indivualSongList .deleteBtn svg path {
+    fill: red;
+}
+
+.indivualSongList .editBtn:hover {
+    background-color: green;
+}
+
+.indivualSongList .deleteBtn:hover {
+    background-color: red;
+}
+
+.indivualSongList .editBtn:hover svg path, .indivualSongList .deleteBtn:hover svg path {
+    fill: white;
+}
+
+
+
+.filterDiv {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.filterDiv svg {
+    width: 40px;
+    height: auto;
+}
+
+#filter {
+    min-width: 150px;
+}
+
+.songArtist {
+    color: gray;
+    margin-top: 2px;
+    font-weight: unset;
+    font-size: small;
+}
+
+
+
+
+
+/* TABLET  */
+@media only screen and (max-width: 1200px) {
+    
+    
+}
+
+
+
+/* MOBILE  */
+@media only screen and (max-width: 768px) {
+    .albumHeader .content {
+        display: grid;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .albumHeader .content .right .otherData {
+        justify-content: center;
+    }
+
+    .albumHeader .toolbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .albumHeader .toolbar span {
+        display: none;
+    }
+
+    .songDuration {
+        display: none;
+    }
+
+    .outputAlbum {
+        grid-template-columns: 1fr;
+    }
+}

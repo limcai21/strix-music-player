@@ -1,0 +1,26 @@
+#siteLogo {
+    max-width: 80px;
+    margin-left: auto;
+}
+
+#siteLogo path {
+    fill: black;
+}
+
+#loginHTML {
+    background-color: var(--extraColor1);
+}
+
+/* TABLET  */
+@media only screen and (max-width: 1200px) {
+    
+}
+
+
+
+/* MOBILE  */
+@media only screen and (max-width: 768px) {
+    html, body {
+        min-height: unset;
+    }
+}

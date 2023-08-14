@@ -1,0 +1,273 @@
+.inputDataSection {
+    display: grid;
+    row-gap: 5px;
+}
+
+form {
+    display: grid;
+    row-gap: 20px;
+}
+
+.main {
+    padding: 60px 20px;
+}
+
+.errorSection, .successSection {
+    position: unset;
+}
+
+form input[type='submit'] {
+    margin-top: 30px;
+    width: fit-content;
+    cursor: pointer;
+}
+
+form input[type='submit']:disabled {
+    background-color: darkgray;
+    cursor: default;
+}
+
+
+
+
+
+/* TOP NAVIGATION BAR */
+#topNav {
+    box-sizing: border-box;
+    min-height: 60px;
+    width: 100%;
+    background-color: #000;
+    padding: 10px 20px;
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: 4fr 8fr;
+    align-items: center;
+}
+
+#topNav .left, #topNav .right {
+    display: grid;
+    align-items: center;
+}
+
+#topNav .left a {
+    display: contents;
+}
+
+#topNav .left #siteLogo {
+    max-width: 80px;
+}
+
+#topNav .right {
+    display: grid;
+    text-align: center;
+    justify-content: right;
+}
+
+#topNav .right .links {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+}
+
+#topNav .right .links .menu1  {
+    display: flex;
+    column-gap: 30px;
+}
+
+#topNav .right .links .menu1 .navigationSection {
+    display: flex;
+    column-gap: 20px;
+}
+
+#topNav .right .links .menu1 .navigationSection button {
+    font-weight: 700;
+}
+
+#topNav .right .links .menu2  {
+    display: flex;
+    column-gap: 10px;
+}
+
+svg {
+    display: block;
+}
+
+.seperator {
+    background-color: #fff;
+    border-radius: 10px;
+    width: 2px;
+    height: 20px;
+}
+
+.smallText {
+    font-size: small;
+    font-weight: 600;
+    color: black;
+}
+
+
+
+
+
+
+
+/* GLOBAL */
+.errorQuery {
+    background-color: red;
+    color: white;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    padding: 10px 20px;
+}
+
+.titlePaddingBottom30 {
+    padding-bottom: 30px;
+}
+
+.choiceBtn button {
+    width: 100%;
+    min-height: 40px;
+    font-size: 24px;
+}
+
+.choiceBtn button:hover {
+    width: 200%;
+}
+
+.header {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.actionBtn {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.actionBtn svg {
+    max-width: 25px;
+    height: auto;
+}
+
+.actionBtn button, .header button {
+    background-color: var(--primaryColor);
+    font-weight: 600;
+}
+
+.explictRadioButtonSection {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.explictRadioButtonSection .radioButtonSection {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+
+#navDropLabel {
+    cursor: pointer;
+}
+
+#navDropLabel, #navDrop {
+    display: none;
+}
+
+.header #title span {
+    font-size: 16px;
+    font-weight: normal;
+    margin-top: 3px;
+}
+
+
+
+
+
+
+
+
+
+/* TABLET  */
+@media only screen and (max-width: 1200px) {
+    
+    
+}
+
+
+
+/* MOBILE  */
+@media only screen and (max-width: 768px) {
+    .choiceBtn {
+        flex-direction: column;
+        row-gap: 5px;
+    }
+
+    .header {
+        flex-direction: column;
+        row-gap: 5px;
+        align-items: flex-start;
+    }
+
+    .actionBtn button, .header button {
+        height: unset!important;
+    }
+
+    .choiceBtn button {
+        font-size: 16px;
+    }
+
+    #topNav .right .links {
+        display: none;
+    }
+
+
+
+    /* NAV BAR */
+    #navDropLabel {
+        display: block;
+    }
+
+    #navDrop:checked ~ .links {
+        display: grid;
+        row-gap: 20px;
+        position: absolute;
+        top: 40px;
+        background-color: black;
+        border-top: 2px solid white;
+        border-bottom: 5px solid var(--primaryColor);;
+        padding: 20px;
+        width: 100%;
+        left: 0;
+        box-sizing: border-box;
+        min-width: 400px;
+        z-index: 1;
+    }
+
+    #topNav .right .links .menu1 {
+        display: grid;
+        row-gap: 20px;
+    }
+
+    #topNav .right .links .menu1 .navigationSection {
+        display: grid;
+        row-gap: 10px;
+        justify-content: start;
+    }
+
+    #topNav .right .links .menu1 .navigationSection button[accent='navigationLink'] {
+        text-align: left;
+        box-shadow: none;
+    }
+
+    #topNav .right .links .seperator {
+        display: none;
+    }
+}
+

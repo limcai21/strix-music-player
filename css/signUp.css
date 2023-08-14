@@ -1,0 +1,46 @@
+.passwordSection {
+    display: flex;
+    gap: 20px 10px;
+    align-items: flex-start;
+}
+
+.passwordSection div {
+    width: 100%;
+}
+
+#siteLogo {
+    max-width: 80px;
+    margin-left: auto;
+}
+
+#siteLogo path {
+    fill: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* TABLET  */
+@media only screen and (max-width: 1200px) {
+    
+}
+
+
+
+/* MOBILE  */
+@media only screen and (max-width: 768px) {
+    html, body {
+        min-height: unset;
+    }
+
+    .passwordSection {
+        flex-direction: column;
+    }
+}
