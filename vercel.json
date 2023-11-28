@@ -1,4 +1,0 @@
-{ 
-  "src": "/page\\.php(.*)",
-  "dest": "/api/index\\.php$1"
-},
