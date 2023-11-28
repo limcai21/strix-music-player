@@ -4,10 +4,5 @@
   "routes": [
     { "src": "/", "dest": "index.php" }，
     { "src": "/account", "dest": "account.php" }，
-    { "src": "/footer", "dest": "footer.php" }，
-    { "src": "/header", "dest": "header.php" }，
-    { "src": "/login", "dest": "login.php" }，
-    { "src": "/logout", "dest": "logout.php" }，
-    { "src": "/signup", "dest": "signup.php" }
   ]
 }
